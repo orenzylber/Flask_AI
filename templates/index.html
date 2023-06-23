@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Index</h1>
+  <form action="/predict" method="post">
+    Age:<input name="age">
+    Gender:<select name="gender">
+        <option value="0">Male</option>
+        <option value="1">Female</option>
+    </select>    
+    
+    <input type="submit">
+  </form>
+  <p class="important">
+    Welcome to my awesome homepage.
+{% endblock %}
